@@ -15,7 +15,7 @@ const Footer = () => {
         <h1>EquRent</h1>
         <p>High Quality is our first priority</p>
 
-        <p>Copyrights 2021 &copy; VijayAnand.M</p>
+        <p>Copyrights 2021 &copy; Nivetha s</p>
       </div>
     </footer>
   );

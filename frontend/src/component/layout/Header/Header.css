@@ -1,0 +1,250 @@
+.speedDial {
+  position: fixed;
+  right: 3vmax;
+  top: 0.8rem;
+}
+
+.speedDial123 {
+  position: fixed;
+  right: 3vmax;
+  top: 1rem;
+}
+
+.skip{
+  z-index: 11;
+}
+
+.search{
+  position: fixed;
+  right: 9vmax;
+  top: 0.7rem;
+  color:black;
+  display: flex;
+  background-color: orangered;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+  .search{
+    right: 15vmax;
+  }
+  .speedDial{
+    top: 0.4em;
+  }
+}
+
+@media (max-width: 390px) {
+  .search{
+    right: 18vmax;
+    top: 0.4em;
+  }
+
+}
+
+.speedDialIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.speedDialIcon123 {
+  width: 60px;
+  height: 59px;
+  border-radius: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.nav-open main {
+  transform: scale(0.8);
+}
+
+.nav-trigger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  left: 40px;
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+.nav-trigger span,
+.nav-trigger span::before,
+.nav-trigger span::after {
+  position: absolute;
+  height: 4px;
+  width: 36px;
+  background: #63b4b8;
+}
+
+.nav-trigger span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s;
+}
+
+.nav-trigger span::before,
+.nav-trigger span::after {
+  content: "";
+  top: 0;
+  left: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-trigger span::before {
+  transform: translateY(-12px);
+}
+
+.nav-trigger span::after {
+  transform: translateY(12px);
+}
+
+.nav-trigger:hover span,
+.nav-trigger:hover span::before,
+.nav-trigger:hover span::after {
+  background: orangered;
+}
+
+.nav-open .nav-trigger span {
+  background: transparent;
+}
+
+.nav-open .nav-trigger span::before,
+.nav-open .nav-trigger span::after {
+  background: orangered;
+}
+
+.nav-open .nav-trigger span::before {
+  transform: rotate(-45deg);
+}
+
+.nav-open .nav-trigger span::after {
+  transform: rotate(45deg);
+}
+
+.nav-container {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  width: 90%;
+  max-width: 460px;
+  padding: 2em 3.5em;
+  background: #090B13;
+  overflow: auto;
+  transform: translateZ(0);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
+}
+
+.nav-open .nav-container {
+  transform: translateX(0);
+}
+
+.nav li{
+  margin: 1rem;
+}
+
+.nav-container h2 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin: 1.5em 0;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 7rem;
+}
+
+.nav a {
+  display: block;
+  padding: 0.4em 0;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: serif;
+  text-decoration: none;
+  color: #c1c6ca;
+  transform: translateZ(0);
+}
+
+.nav a:hover{
+  color: #63b4b8;
+  transform: translateY(-10%);
+  font-size: 3rem;
+}
+
+.nav-open .nav a {
+  animation: slide-in 0.4s 0.2s backwards;
+}
+
+.nav-open .nav li:nth-of-type(2) a {
+  animation-delay: 0.3s;
+}
+
+.nav-open .nav li:nth-of-type(3) a {
+  animation-delay: 0.4s;
+}
+
+.nav-open .nav li:nth-of-type(4) a {
+  animation-delay: 0.5s;
+}
+
+.nav-open .nav li:nth-of-type(5) a {
+  animation-delay: 0.6s;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fixed-bar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  background-color: #090B13;
+}
+
+@media screen and (width : 1024px) and (min-width :1000px) {
+  .fixed-bar{
+    height: 7%;
+  }
+  
+}
+
+@media screen and (max-width : 750px) {
+  .fixed-bar{
+    height: 9%;
+  }
+  .nav-trigger{
+    left: 1rem;
+    top:0.7rem
+  }
+  
+}

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  cursor: url("./images/cursor.png"), auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.greenColor {
+  color: green !important;
+}
+.redColor {
+  color: red !important;
+}
+
+/*      CArt           */
+
+.cart{
+  position: fixed;
+  right: 3vmax;
+  bottom: 0.8rem;
+  background-color: #63b4b8;
+  height: 60px;
+  width: 60px;
+  border-radius: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+  cursor: pointer;
+  z-index: 60;
+}
+
